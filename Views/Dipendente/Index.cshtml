@@ -1,0 +1,37 @@
+﻿@section Style {
+    <link href="c:\users\danie\desktop\corso back-end\asp.net-mvc-1\aziendaedile02\styles\indexdipendenti.css" rel="stylesheet" />
+}
+@model List<Dipendente>
+
+@{
+    ViewBag.Title = "Lista Dipendenti";
+}
+
+<h2>Lista Dipendenti</h2>
+
+<table class="table">
+    <tr>
+        <th>Id</th>
+        <th>Nome</th>
+        <th>Cognome</th>
+        <th>Indirizzo</th>
+        <th>Codice Fiscale</th>
+        <th>Coniugato</th>
+        <th>Numero Figli</th>
+        <th>Mansione</th>
+    </tr>
+    @foreach (var dipendente in Model)
+    {
+        <tr>
+            <td>@dipendente.Id</td>
+            <td>@dipendente.Nome</td>
+            <td>@dipendente.Cognome</td>
+            <td>@dipendente.Indirizzo</td>
+            <td>@dipendente.CodiceFiscale</td>
+            <td>@dipendente.Coniugato</td>
+            <td>@dipendente.NumeroFigli</td>
+            <td>@dipendente.Mansione</td>
+        </tr>
+    }
+</table>
+

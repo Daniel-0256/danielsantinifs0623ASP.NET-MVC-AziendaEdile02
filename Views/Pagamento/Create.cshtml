@@ -1,0 +1,29 @@
+﻿@model Pagamento
+
+@{
+    ViewBag.Title = "Crea Pagamento";
+}
+
+<h2>Creazione Pagamento</h2>
+
+@using (Html.BeginForm())
+{
+    <div class="form-group">
+        @Html.LabelFor(model => model.Id)
+        @Html.TextBoxFor(model => model.Id, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(model => model.PeriodoPagamento)
+        @Html.TextBoxFor(model => model.PeriodoPagamento, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(model => model.Ammontare)
+        @Html.TextBoxFor(model => model.Ammontare, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(model => model.Stipendio)
+        @Html.CheckBoxFor(model => model.Stipendio)
+    </div>
+    <button type="submit" class="btn btn-primary">Crea</button>
+}
+

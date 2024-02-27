@@ -1,0 +1,26 @@
+﻿@model List<Pagamento>
+
+@{
+    ViewBag.Title = "Lista Pagamenti";
+}
+
+<h2>Lista Pagamenti</h2>
+
+<table class="table">
+    <tr>
+        <th>Id</th>
+        <th>Periodo Pagamento</th>
+        <th>Ammontare</th>
+        <th>Stipendio</th>
+    </tr>
+    @foreach (var pagamento in Model)
+    {
+        <tr>
+            <td>@pagamento.Id</td>
+            <td>@pagamento.PeriodoPagamento</td>
+            <td>@pagamento.Ammontare</td>
+            <td>@pagamento.Stipendio</td>
+        </tr>
+    }
+</table>
+
